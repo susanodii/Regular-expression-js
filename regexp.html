@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+var youName = prompt("Hello, what is your name?");
+        var tiideLab = confirm("Are you a fellow at TIIDELab?");
+        if (tiideLab === true) {
+            var inputYourEmail = prompt("please input your email");
+
+        }
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+    
+        if (inputYourEmail.match(validRegex)) {
+            alert("valid Email")
+            // let replaceEmail = inputYourEmail.replace(/.(?=\w*@)/gm, "*")
+            let replaceEmail = inputYourEmail.replace(/(.)/gm, "*")
+            alert(replaceEmail);
+
+        } else {
+            alert("Invalid Email")
+        }
+
+    </script>
+</body>
+</html>
